@@ -1,5 +1,5 @@
 <?php
-
+//namespace AbstractFactory\Element\Checkbox;
 
 abstract class Checkbox
 {

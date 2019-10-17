@@ -1,5 +1,5 @@
 <?php
-
+//namespace AbstractFactory\Element\Checkbox;
 
 class WinCheckbox extends Checkbox
 {

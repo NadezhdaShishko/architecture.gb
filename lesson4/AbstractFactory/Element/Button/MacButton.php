@@ -1,5 +1,5 @@
 <?php
-
+//namespace AbstractFactory\Element\Button;
 
 class MacButton extends Button
 {
