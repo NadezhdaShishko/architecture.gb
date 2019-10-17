@@ -9,3 +9,11 @@ require 'Element/Button/WinButton.php';
 require 'Element/Checkbox/Checkbox.php';
 require 'Element/Checkbox/MacCheckbox.php';
 require 'Element/Checkbox/WinCheckbox.php';
+
+function testAbstractFactory(Graphic $graphic) {
+
+    return $graphic->startPaint();
+
+}
+
+testAbstractFactory(new MacGraphic());
