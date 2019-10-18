@@ -1,20 +1,13 @@
 <?php
 
-class TextSecond implements IText
+class FacebookDecorator extends Decorator
 {
-protected $objText;
-
-
-	public function __construct(IText $objText)
-	{
-		$this->objText = $objText;
-	}
-
-	public function show()
-	{
-		echo 'Second';
-		$this->objText->show();
-	}
-
-
+    /**
+     * @param $message
+     * @return string
+     */
+    public function send($message)
+    {
+        return "Facebook: " . parent::send($message);
+    }
 }

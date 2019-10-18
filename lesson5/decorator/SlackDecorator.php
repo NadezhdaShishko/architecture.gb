@@ -1,19 +1,17 @@
 <?php
 
-class TextSpace implements IText
+class SlackDecorator implements INotifier
 {
-protected $objText;
+    protected $message;
 
+    public function __construct(INotifier $message)
+    {
+        $this->message = $message;
+    }
 
-	public function __construct(IText $objText)
-	{
-		$this->objText = $objText;
-	}
-
-	public function show()
-	{
-		echo ' ';
-		$this->objText->show();
-	}
-
+    public function send($message)
+    {
+        echo 'Slack';
+        $this->message->send($message);
+    }
 }

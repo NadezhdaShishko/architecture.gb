@@ -1,21 +1,10 @@
 <?php
 
 
-class Decorator implements INotifier
+class BaseDecorator implements INotifier
 {
-    /**
-     * @var INotifier
-     */
-    protected $wrappee;
-
-    public function __construct(INotifier $wrappee)
+    public function send($message)
     {
-        $this->wrappee = $wrappee;
+        return "BaseDecorator";
     }
-
-	public function send($message)
-	{
-	    return $this->wrappee = $this->send($message);
-	}
-
 }

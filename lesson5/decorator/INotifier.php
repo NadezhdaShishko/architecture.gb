@@ -1,7 +1,7 @@
 <?php
 
 
-interface IText
+interface INotifier
 {
-public function send($message);
+    public function send($message);
 }

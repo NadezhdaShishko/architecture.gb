@@ -4,9 +4,9 @@ spl_autoload_register(function ($classname) {
 	require_once ($classname.'.php');
 });
 
-$decorator = new TextFirst(new TextSpace(new TextFirst(new TextEmpty())));
+$decorator = new SMSDecorator(new SlackDecorator(new SMSDecorator(new BaseDecorator())));
 
-$decorator = new TextSpace($decorator);
-$decorator = new TextSecond($decorator);
+$decorator1 = new SlackDecorator($decorator);
+$decorator2 = new FacebookDecorator($decorator1);
 
-$decorator->show();
+$decorator->send("Alert!");
